@@ -1,0 +1,37 @@
+{
+    "name": "gulp-reduce-file",
+    "version": "0.0.1",
+    "description": "Reduce files to one single output using custom callbacks.",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test/test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mvhenten/gulp-reduce-file.git"
+    },
+    "keywords": [
+    "gulp",
+    "reduce",
+    "file"
+  ],
+    "author": "M. van Henten",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mvhenten/gulp-reduce-file/issues"
+    },
+    "homepage": "https://github.com/mvhenten/gulp-reduce-file",
+    "dependencies": {
+        "through": "^2.3.6",
+        "gulp-util": "^3.0.1"
+    },
+    "devDependencies": {
+        "tape": "^3.0.0",
+        "event-stream": "^3.1.7",
+        "vinyl": "^0.4.3",
+        "stream-array": "^0.1.3",
+        "stream-assert": "^2.0.1",
+        "js-beautify": "^1.5.1",
+        "jshint": "^2.5.6"
+    }
+}
