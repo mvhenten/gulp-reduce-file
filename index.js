@@ -11,11 +11,9 @@ module.exports = function reduce(filename, fn, done, memo) {
     if (!done instanceof Function) throw new PluginError('gulp-reduce-file', 'Missing done callback for gulp-reduce-file');
 
     memo = memo || '';
-    
-    fn = fn.apply(this, [file, memo]);
 
     function iterate(file) {
-        memo = fn(file, memo);
+        memo = fn.apply(this, [file, memo]);
     }
 
     function end() {
