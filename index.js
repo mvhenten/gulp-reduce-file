@@ -13,11 +13,11 @@ module.exports = function reduce(filename, fn, done, memo) {
     memo = memo || '';
 
     function iterate(file) {
-        memo = fn(file, memo);
+        memo = fn.apply(this, [file, memo]);
     }
 
     function end() {
-        var content = done(memo),
+        var content = done.apply(this, [memo]),
             target = new File();
 
         if (typeof content === 'string') content = new Buffer(content);
